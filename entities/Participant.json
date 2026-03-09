@@ -1,0 +1,29 @@
+{
+  "name": "Participant",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the participant"
+    },
+    "sex": {
+      "type": "string",
+      "enum": [
+        "male",
+        "female"
+      ],
+      "description": "Sex of the participant"
+    },
+    "session_id": {
+      "type": "string",
+      "description": "Tournament ID this participant belongs to"
+    },
+    "pair_number": {
+      "type": "number",
+      "description": "Optional pairing number \u2014 two participants with the same number will be forced into a pair"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

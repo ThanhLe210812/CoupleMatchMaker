@@ -1,0 +1,64 @@
+{
+  "name": "Tournament",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the tournament"
+    },
+    "game_mode": {
+      "type": "string",
+      "enum": [
+        "single",
+        "double"
+      ],
+      "default": "double"
+    },
+    "grouping_mode": {
+      "type": "string",
+      "enum": [
+        "couplesPerGroup",
+        "totalGroups"
+      ],
+      "default": "couplesPerGroup"
+    },
+    "couples_per_group": {
+      "type": "number",
+      "default": 2
+    },
+    "total_groups": {
+      "type": "number",
+      "default": 2
+    },
+    "groups": {
+      "type": "string",
+      "description": "JSON stringified groups structure"
+    },
+    "solo_participant": {
+      "type": "string",
+      "description": "JSON stringified solo participant"
+    },
+    "session_id": {
+      "type": "string"
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "setup",
+        "group_stage",
+        "quarter_finals",
+        "semi_finals",
+        "final",
+        "finished"
+      ],
+      "default": "setup"
+    },
+    "knockout_brackets": {
+      "type": "string",
+      "description": "JSON stringified knockout bracket matches"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

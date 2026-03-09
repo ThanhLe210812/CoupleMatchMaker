@@ -1,0 +1,57 @@
+{
+  "name": "Match",
+  "type": "object",
+  "properties": {
+    "session_id": {
+      "type": "string",
+      "description": "Groups session identifier"
+    },
+    "tournament_id": {
+      "type": "string",
+      "description": "Tournament this match belongs to"
+    },
+    "game_mode": {
+      "type": "string",
+      "enum": [
+        "single",
+        "double"
+      ],
+      "default": "double"
+    },
+    "group_index": {
+      "type": "number",
+      "description": "Which group this match belongs to"
+    },
+    "round": {
+      "type": "number",
+      "description": "Round number within the group"
+    },
+    "player1": {
+      "type": "string"
+    },
+    "player2": {
+      "type": "string"
+    },
+    "score1": {
+      "type": "number"
+    },
+    "score2": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "completed"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "session_id",
+    "group_index",
+    "round",
+    "player1",
+    "player2"
+  ]
+}
